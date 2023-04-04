@@ -1,8 +1,7 @@
 // 使用者驗證
 const userModel = require('./userModel')
 
-function userAuth(email, password) {
-
+function userAuth (email, password) {
   console.log('finding user...')
 
   return userModel.findOne({ email, password })

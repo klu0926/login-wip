@@ -1,10 +1,11 @@
 const Router = require('express').Router()
 
-Router.get('/', (req, res) => {
+Router.get('/:user_id', (req, res) => {
 
   if (res.locals.login) {
-    return res.redirect(`/user/${res.locals.user_name}`)
+    return res.render('welcome')
   }
+
   res.redirect('/login')
 })
 
